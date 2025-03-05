@@ -25,8 +25,10 @@ Since the script runs without user intereaction, you need to let it know when to
 
 1. Clone this repo
 2. From the parent folder, execute `python3 -m venv MirrorChrome` to create a virtual environment in the same folder.
-3. Change into the MirrorChrome/ folder and activate the virtual environment with `Scripts\activate`
-4. Instal the requirements using `pip install -r requirements.txt`
+3. Change into the MirrorChrome/ folder and activate the virtual environment with `Scripts\activate`.
+4. Install the requirements using `pip install -r requirements.txt`.
+5. Run the script with `python mirror.py`.
+6. Follow instructions.
 
 ## Watch it work
 
@@ -36,4 +38,4 @@ https://github.com/user-attachments/assets/9a4db7b4-8c03-4ce2-a1d8-0246f4ee4c73
 
 The interface has changed somewhat since then, but the functionality remains the same.
 
-## Enjoy
+## Quaeso, opera mea fruere.
