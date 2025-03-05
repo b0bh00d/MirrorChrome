@@ -34,7 +34,7 @@ Since the script runs without user intereaction, you need to let it know when to
 
 This video, captured during development, demonstrates the script mirroring random tabs from Chrome to Firefox.
 
-https://github.com/user-attachments/assets/9a4db7b4-8c03-4ce2-a1d8-0246f4ee4c73
+https://github.com/user-attachments/assets/8e463349-071c-4f08-9b54-1f1989705f7e
 
 The interface has changed somewhat since then, but the functionality remains the same.
 
