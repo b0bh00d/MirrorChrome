@@ -23,12 +23,19 @@ Since the script runs without user intereaction, you need to let it know when to
 
 ## How to use it
 
+### For the tehnically inclined...
 1. Clone this repo
 2. From the parent folder, execute `python3 -m venv MirrorChrome` to create a virtual environment in the same folder.
 3. Change into the MirrorChrome/ folder and activate the virtual environment with `Scripts\activate`.
 4. Install the requirements using `pip install -r requirements.txt`.
 5. Run the script with `python mirror.py`.
 6. Follow instructions.
+
+### For the technically challenged...
+1. Download the MirrorChrome.exe execuatble available as a Release (look over there -->).
+2. Make sure your Chrome window(s) is open with the tabs you want to mirror.
+3. Run the executable.
+4. Follow instructions.
 
 ## Watch it work
 
