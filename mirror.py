@@ -162,7 +162,7 @@ def find_chrome() -> WindowMgr:
         w.find_window_substr("- Google Chrome")
     except Exception:
         print(f"{fore_colors['RED']}ERROR{fore_colors['RESET']}: Coud not locate a window with 'Google Chrome' in its title.")
-        sys.exit(1)
+        graceful_abort(1)
 
     return w
 
@@ -178,7 +178,7 @@ def connect_to_chrome(hwnd):
         app.connect(handle=hwnd)
     except Exception:
         print(f"{fore_colors['RED']}ERROR{fore_colors['RESET']}: More than one potential Chrome window was found.")
-        sys.exit(1)
+        graceful_abort(1)
 
     dlg = app.top_window()
     return dlg
@@ -209,6 +209,24 @@ def elide(value: str, max: int, tail: str = '') -> str:
         return f"{value[:(max - len(tail))]}{tail}"
     return value
 
+def graceful_abort(code: int):
+    """
+    Abort as gracefully as possible
+    """
+
+    # hold the terminate window open if we are running under pyinstaller
+    if bundled():
+        print('Press Enter to exit...')
+        input()
+
+    sys.exit(code)
+
+def bundled() -> bool:
+    """
+    Are we running under a pyinstaller bundle?
+    """
+    return getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS')
+
 def main() -> int:
     global have_color
 
@@ -226,7 +244,7 @@ def main() -> int:
             input()
         except KeyboardInterrupt:
             print('Cancel requested.')
-            sys.exit(0)
+            graceful_abort(0)
 
         # See this ...
         # https://stackoverflow.com/questions/63648053/pywintypes-error-0-setforegroundwindow-no-error-message-is-available
@@ -266,4 +284,11 @@ def main() -> int:
     return 0
 
 if __name__ == "__main__":
-    sys.exit(main())
+    result = main()
+
+    # hold the terminate window open if we are running under pyinstaller
+    if bundled():
+        print('Press Enter to exit...')
+        input()
+
+    sys.exit(result)
