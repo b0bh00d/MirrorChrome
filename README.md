@@ -19,7 +19,7 @@ Primarily, it exists to allow you to migrate your browser life out of Chrome and
 
 The script will provide you with instructions when you run it.  Simply, have one or more Chrome windows open on your Windows desktop, and be sure Firefox is installed (and recommended to be open somewhere).
 
-Since the script runs without user intereaction, you need to let it know when to stop mirroring tabs.  This is accomplished by placing a "dead" (or "marker") tab someplace that contains no value in its address bar.  This will signal to the script that it has reached the end of the tab march, and will cause it to exit.  So, if you want to export _all_ tabs in a paricular Chrome window, open a new tab the end of the line, and then go back and select the first tab in the list.  Alternately, you can position the "marker" tab anywhere you like, and select any starting tab you like (as long as it preceeds the "marker" tab) to export only subsets of your open tabs.
+Since the script runs without user interaction, you need to let it know when to stop mirroring tabs.  This is accomplished by placing a "dead" (or "marker") tab someplace that contains no value in its address bar.  This will signal to the script that it has reached the end of the tab march, and will cause it to exit.  So, for example, if you want to export _all_ tabs in a paricular Chrome window, open a new tab the end of the line, and then go back and select the first tab in the list.  Alternately, you can position the "marker" tab anywhere you like, and select any starting tab you like (as long as it preceeds the "marker" tab) to export only subsets of your open tabs.
 
 ## How to use it
 
